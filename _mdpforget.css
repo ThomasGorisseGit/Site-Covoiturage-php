@@ -1,0 +1,20 @@
+:root{
+    --vert: #82c488;
+    --guess: #57d53b ;
+    --black:rgb(27, 27, 27);
+    --gris:rgb(49, 49, 49);
+    --grisfonce:rgb(41, 41, 41);
+    --blancclair:rgb(231, 231, 231);
+    --midblanc:rgb(228, 228, 228);
+    --blancfonce:rgb(179, 179, 179);
+}
+form{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20vh;
+    height: 500px;
+    width: 80%;
+    background-color: var(--vert);
+}

@@ -1,0 +1,94 @@
+:root{
+    --vert: #82c488;
+    --guess: #57d53b ;
+    --black:rgb(27, 27, 27);
+    --gris:rgb(49, 49, 49);
+    --grisfonce:rgb(41, 41, 41);
+    --blancclair:rgb(231, 231, 231);
+    --midblanc:rgb(228, 228, 228);
+    --blancfonce:rgb(179, 179, 179);
+}
+p{
+    color: var(--gris);
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blancfonce);
+    font-family: 'Rubik', sans-serif;
+
+}
+form{
+    margin-top: 20vh;
+    background-color: var(--blancclair);
+    padding: 40px 60px;
+    border-radius: 10px;
+    min-width: 300px;
+    box-shadow: 8px 8px rgba(55,55,55,0.3);
+}
+form h1{
+    color: var(--guess);
+    text-align: center;
+}
+form .social-media {
+    margin-top: -10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+form .social-media p{
+    padding: 5px;
+    margin-left: 10px;
+    border: 1px solid #545454;
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    cursor: pointer;
+    
+}
+form p.choose-email{
+    text-align: center;
+}
+form .inputs{
+    display: flex;
+    flex-direction: column;
+}
+form .inputs input:hover{
+    background-color: #e2e2e2;
+}
+form .inputs input[type="email"],input[type="password"]{
+    padding: 15px;
+    border-radius: 10px;
+    border:none;
+    margin-bottom:15px;
+    outline: none;
+    font-size: 20px;
+    transition: 0.2s background-color ease-in;
+}
+.div-inscription{
+    text-align: center;
+}
+.button-connection{
+    text-align: center;
+}
+form p.inscription .surligne{
+    color: var(--guess);
+}
+form button{
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    color: var(--gris);
+    cursor: pointer;  
+}
+form button:hover{
+    background-color: #c4c4c4;
+    /*c4c4c4*/
+}
+a{
+    text-decoration: none;
+    color: #57d53b;
+}

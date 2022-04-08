@@ -1,0 +1,137 @@
+
+:root{
+    --vert: #82c488;
+    --guess: #57d53b ;
+    --black:rgb(27, 27, 27);
+    --gris:rgb(49, 49, 49);
+    --grisfonce:rgb(41, 41, 41);
+    --blancclair:rgb(231, 231, 231);
+    --midblanc:rgb(228, 228, 228);
+    --blancfonce:rgb(179, 179, 179);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blancfonce);
+    font-family: 'Roboto', sans-serif;
+
+}
+p{
+    color: var(--gris);
+}
+form{
+    margin-top: 5vh;
+    background-color: var(--blancclair);
+    padding: 40px 60px;
+    border-radius: 10px;
+    min-width: 300px;
+    min-height: 300px;
+    height: 100%;
+    width: 60%;
+    box-shadow: 8px 8px rgba(55,55,55,0.3);
+    
+}
+hr.rounded {
+    border-top: 3px solid var(--gris);
+    border-radius: 5px;
+    box-shadow: none;
+    margin-bottom: 3vh;
+  }
+form h1{
+    color: var(--guess);
+    text-align: center;
+    margin-bottom: 5vh;
+    
+}
+form .field{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+label{
+    margin: 10px 0px;
+    font-weight: bolder;
+}
+input{
+    border: none;
+    outline:none;
+    width: 40%;
+    text-align: center;
+}
+
+
+
+
+form h1{
+    color: var(--guess);
+    text-align: center;
+}
+
+
+input:hover{
+    background-color: #e2e2e2;
+}
+input{
+    padding: 15px;
+    border-radius: 10px;
+    border:none;
+    margin-bottom:15px;
+    outline: none;
+    font-size: 20px;
+    transition: 0.2s background-color ease-in;
+}
+
+
+form button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    color: var(--gris);
+    cursor: pointer;  
+}
+form button:hover{
+    background-color: #c4c4c4;
+    /*c4c4c4*/
+}
+.align{
+    display: flex;
+    background-color: gray;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+ 
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+.button-inscription{
+    font-size: 1.05em;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(var(--guess), var(--vert));
+    padding: 10px;
+    color: var(--blancclair);
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+.button-inscription:hover{
+    transform: scale(1.05);
+    transition: 0.2s;
+}

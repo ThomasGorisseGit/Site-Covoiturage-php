@@ -1,0 +1,77 @@
+.brand-title{
+    margin: 0;
+    padding: 0;
+    max-height: 100px;
+    max-width: 100%;
+    display: flex;
+    
+}
+.logo{
+    max-width: 70px;
+    width: 100%;
+    height: 100%;
+    margin:10px;
+    display:block
+}
+.global-title{
+    margin-left: 5px;
+    padding: 0;
+}
+#slogan{
+    position:absolute;
+    top: 2.5rem;
+    font-size: 1.1em;
+    left: 10rem;
+}
+.pre-navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* .connection-li{
+    
+    list-style: none;
+}
+.connection-li a{
+    margin-right: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    font-weight: bolder;
+}  */
+.connection{
+    padding:0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.button-connection{
+    font-size: 1.05em;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.button-connection:hover{
+    color: var(--guess);
+    transition: 0.2s;
+}
+.button-inscription{
+    font-size: 1.05em;
+    border: none;
+    font-weight: 600;
+    background: linear-gradient(var(--guess), var(--vert));
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 1s;
+}
+.button-inscription:hover{
+    transform: scale(1.05);
+    transition: 1s;
+}
