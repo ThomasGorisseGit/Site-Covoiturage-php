@@ -6,8 +6,8 @@ include 'settingsBDD.php';
 if(isset($_POST["submit"])){
     
 
-    $email = $_POST['mail'];
-    $mdp = $_POST['mdp'];
+    $email = htmlspecialchars($_POST['mail']);
+    $mdp = htmlspecialchars($_POST['mdp']);
     $sql = "SELECT * FROM compte WHERE email = '$email' ";
     $result = $db -> prepare($sql);
     $result->execute();
@@ -20,10 +20,8 @@ if(isset($_POST["submit"])){
             echo "connexion effectuée";
             $_SESSION["mail"] = $email;
             $_SESSION["login"] = $data[0]['motDePasse'];
-            ?>
-
-            <a href="./index.php">Retourner vers l'accueil</a>
-            <?php
+            $_SESSION['idCompte'] = $data[0]['idCompte'];
+            header('Location: profile.php');
         }
         else{
             echo "mot de passe incorrect ... ";

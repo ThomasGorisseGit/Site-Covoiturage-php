@@ -64,7 +64,7 @@ body{
     border-radius: 10px;
     
 }
-form{
+form.search{
     width: 300px;
     height: 5.5vh;
     border-radius: 5px;

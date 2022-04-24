@@ -28,7 +28,16 @@
     justify-content: space-between;
 }
 
+.PP{
+    background-color: gray;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
 
+    margin:10px;
+    display:block;
+    
+}
 /* .connection-li{
     
     list-style: none;
@@ -70,6 +79,7 @@
     cursor: pointer;
     border-radius: 10px;
     transition: 1s;
+    margin-right: 20px;
 }
 .button-inscription:hover{
     transform: scale(1.05);

@@ -1,6 +1,13 @@
 <?php
 session_start();
 include 'settingsBDD.php';
+
+if(isset($_SESSION['mail'])){
+  $req = $db ->prepare('SELECT avatar FROM Compte WHERE idCompte = :idCompte');
+  $req->execute(array('idCompte'=>$_SESSION['idCompte']));
+  $userinfo= $req->fetch();
+}
+
 ?>
 
 
@@ -49,38 +56,88 @@ include 'settingsBDD.php';
 <body>
 <?php
   if( isset($_SESSION['login'])){
-    print'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa';
+   
+   if(isset($_SESSION['latitude'])){
+
+    
+    ?>
+
+    
+    <div class="pre-navbar">
+    <span>
+      <div class="brand-title">
+
+        <img class="logo" src="./images/logo4.png" alt="logo">
+        <div>
+          <h1 class="global-title">Covoiturage</h1>
+          <h3 id="slogan"> <em>Plus proche, plus vite, moins cher</em> </h3>
+        </div>
+      </div>
+    </span>
+
+    <div class="connection">
+    <a href="./deconnexion.php">
+      <input type="button" value="Se déconnecter"class="button-connection">
+    </a>
+    <span>
+        <a href="./portail.php">
+          <?php
+          if(!empty($userinfo['avatar'])){
+            ?>
+            <img class="PP" src="./avatars/<?php echo $userinfo['avatar'] ?>" alt="photo de profil">
+            <?php
+          }else{
+            ?>
+            <img class="PP"src="./images/photo-profil.jpg" alt="photo de profile">
+            <?php
+          }
+          
+          ?>
+
+        </a>
+      </span>
+    </div>
+  </div>
+
+
+
+  <?php
+   }
+   else{
+      header('Location: ./updatepos.php');
+   }
+}
+  else {
+    ?>
+    <div class="pre-navbar">
+    <span>
+      <div class="brand-title">
+
+        <img class="logo" src="./images/logo4.png" alt="logo">
+        <div>
+          <h1 class="global-title">Covoiturage</h1>
+          <h3 id="slogan"> <em>Plus proche, plus vite, moins cher</em> </h3>
+        </div>
+      </div>
+    </span>
+
+    <div class="connection">
+<a href="./connection.php">
+      <input type="button"  value="Se connecter" class="button-connection">
+    </a>
+    <a href="./inscription.php">
+      <input type="button" value="S'inscrire" class="button-inscription">
+    </a>
+
+    </div>
+  </div>
+  <?php
   }
   ?>
   <header>
-    <div class="pre-navbar">
-      <span>
-        <div class="brand-title">
 
-          <img class="logo" src="./images/logo4.png" alt="logo">
-          <div>
-            <h1 class="global-title">Covoiturage</h1>
-            <h3 id="slogan"> <em>Plus proche, plus vite, moins cher</em> </h3>
-          </div>
-        </div>
-      </span>
-
-      <div class="connection">
-<a href="./connection.php">
-        <input type="button"  value="Se connecter" class="button-connection">
-      </a>
-      <a href="./inscription.php">
-        <input type="button" value="S'inscrire" class="button-inscription">
-      </a>
-        <span>
-          <a href="./profile.php">
-            <img class="logo" src="./images/logo4.png" alt="logo">
-          </a>
-        </span>
-      </div>
-    </div>
     <nav class="navbar">
-      <form role="search" id="form">
+      <form class="search" role="search" id="form">
         <input type="search" class="research" name="q" placeholder="Rechercher un covoiturage !"
           aria-label="Search through site content">
         <button>
@@ -107,38 +164,13 @@ include 'settingsBDD.php';
       </div>
     </nav>
   </header>
-  <!-- <div id="map-container">
-      <div id="locations-panel">
-        <div id="locations-panel-list">
-          <header>
-            <h1 class="search-title">
-              <img src="https://fonts.gstatic.com/s/i/googlematerialicons/place/v15/24px.svg"/>
-              Find a location near you
-            </h1>
-            <div class="search-input">
-              <input id="location-search-input" placeholder="Enter your address or zip code">
-              <div id="search-overlay-search" class="search-input-overlay search">
-                <button id="location-search-button">
-                  <img class="icon" src="https://fonts.gstatic.com/s/i/googlematerialicons/search/v11/24px.svg" alt="Search"/>
-                </button>
-              </div>
-            </div>
-          </header>
-          <div class="section-name" id="location-results-section-name">
-            All locations
-          </div>
-          <div class="results">
-            <ul id="location-results-list"></ul>
-          </div>
-        </div>
-      </div>
-      <div id="map"></div>
-    </div>
-    <div class="test"><h1>Hellllllo</h1></div> -->
+  <main>
+    <a href="./test.php">Test</a>
+    <a href="./map/testmap.php">Maps</a>
+    <a href="./entrainnement/index.html">Entrainnement</a>
+  </main>
 
-  <script
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDyVDavFhu8bl56YcbMycj-5S7S9HcaXWI&callback=initMap&libraries=places,geometry&solution_channel=GMP_QB_locatorplus_v4_cA"
-    async defer></script>
+
 </body>
 
 </html>

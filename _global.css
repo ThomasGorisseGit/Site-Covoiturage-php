@@ -1,8 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 :root{
     --vert: #82c488;
-    --guess: #60c75e;
+    --guess: #57d53b ;
     --black:rgb(27, 27, 27);
+    --gris:rgb(49, 49, 49);
+    --grisfonce:rgb(41, 41, 41);
+    --blancclair:rgb(231, 231, 231);
+    --midblanc:rgb(228, 228, 228);
+    --blancfonce:rgb(179, 179, 179);
 }
 
 html,

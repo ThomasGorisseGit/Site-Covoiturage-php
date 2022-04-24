@@ -1,0 +1,163 @@
+#titre{
+    text-align: center;   
+    margin-bottom: 5vh;
+}
+body{
+    background-color: var(--blancfonce);
+    height: 120vh;
+}
+.all{
+    background-color: var(--blancclair);
+    margin: 7vh;
+    padding: 5vh;
+    box-shadow: 8px 8px rgba(55,55,55,0.3);
+    
+}
+.feuille{
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+
+
+}
+.PP{
+    border-radius: 50%;
+    width: 125px;
+    height: 125px;
+    margin-right: 8vw;
+    margin-bottom: 20px;
+    align-items: center;
+    text-align: center;
+    margin:0;
+    padding:0;
+}
+.intit{
+    margin-bottom: 5px;
+}
+.content{
+    margin: 0;
+}
+.part1{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+}
+.part2{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:center;
+}
+
+.editdiv{
+    margin-top:3vh;
+   text-align: center;
+}
+.edita{
+    width: 100%;
+    text-decoration: none;
+    color: rgb(49, 49, 49);
+    padding: 10px;
+    background-color: rgb(199, 199, 199);
+    border-radius: 10px;
+
+}
+.edita:hover{
+    background-color: var(--blancfonce);
+}
+.toggle-button{
+    top:1rem;
+}
+.image-upload{
+
+    width: fit-content;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+input{
+    padding: 15px;
+    border: solid 1px rgb(133, 133, 133);
+    border-radius: 10px;
+    margin-bottom:15px;
+    outline: none;
+    font-size: 20px;
+    width: 90%;
+    text-align: center;
+}
+::placeholder{
+    color:rgb(133, 133, 133) ;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+ 
+/* Chrome */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button { 
+	-webkit-appearance: none;
+	margin:0;
+}
+ 
+/* Opéra*/
+input::-o-inner-spin-button,
+input::-o-outer-spin-button { 
+	-o-appearance: none;
+	margin:0
+}
+
+.end{
+   
+    display: block;
+}
+a.modifymdp{
+    margin:3vh;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    
+    display: block;
+}
+.submit{
+    border: solid 1px rgb(133, 133, 133) ;
+    width: fit-content;
+    border-radius: 10px;
+    color: var(--gris);
+    padding: 15px;
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    text-align: center;
+}
+.submit:hover{
+    background-color: #c4c4c4;
+}
+.image-upload img{
+    opacity: 0.8;
+}
+@media screen and (max-width: 650px) {
+
+    .PP{
+        display: block;
+        text-align: center;
+        margin-left: auto;
+        margin-right:auto;
+        padding:0;
+    }
+    .part1{
+        display: block;
+        text-align: center;
+    }
+    .part2{
+        text-align: center;
+        display: block;
+    }
+    .info{
+        margin:0;
+    }
+    .local{
+        margin: 0;
+    }
+}

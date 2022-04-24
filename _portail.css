@@ -1,0 +1,33 @@
+form{
+    text-align: center;
+}
+input{
+    border: solid 1px black;
+    outline:none;
+    width: 40%;
+    text-align: center;
+    padding: 5px;
+    font-size: 1.2em;
+    transition: ease-in-out 0.5s;
+}
+input:hover, input:focus{
+    background-color: rgb(219, 219, 219);
+}
+button{
+    text-align: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    display: block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;  
+    transition: ease-in-out 0.5s;
+}
+form button:hover{
+    background-color: #c4c4c4;
+    /*c4c4c4*/
+}
